@@ -172,11 +172,17 @@ module Option = {
   ];
 };
 
+// Type for representing colors
+module Color = {
+  let t: Typ.t = sum_type([("RGB", Some(prod([int(), int(), int()])))]);
+};
+
 // List of type aliases to add to the context
 let type_aliases: list((string, Typ.t)) = [
   ("Ord", Ord.t),
   ("Option", Option.t),
   ("Either", Either.t),
+  ("Color", Color.t),
   ("$Meta", meta_type),
 ];
 

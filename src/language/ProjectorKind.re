@@ -16,7 +16,8 @@ type t =
   | Card
   | Livelit
   | TextArea
-  | Csv;
+  | Csv
+  | Color;
 
 let livelit_projectors: list(t) = [
   Csv, /* Competes with Card for empty list */
@@ -27,6 +28,7 @@ let livelit_projectors: list(t) = [
   TextArea,
   Card,
   Livelit,
+  Color,
 ];
 
 /* Note: Probe intentionally excluded - probes use separate action path */
@@ -51,6 +53,7 @@ let name = (p: t): string =>
   | Livelit => "livelit"
   | TextArea => "text"
   | Csv => "csv"
+  | Color => "color"
   };
 
 /* This must be updated and kept 1-to-1 with the above
@@ -68,6 +71,7 @@ let of_name = (p: string): t =>
   | "livelit" => Livelit
   | "card" => Card
   | "csv" => Csv
+  | "color" => Color
   | _ => failwith("Unknown projector kind")
   };
 

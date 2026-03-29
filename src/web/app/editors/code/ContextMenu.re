@@ -418,6 +418,7 @@ module Projectors = {
     | Card => "Card"
     | TextArea => "Text"
     | Csv => "CSV"
+    | Color => "Color"
     | Livelit => "Livelit"
     | Probe => "Probe" /* shouldn't appear in menu */
     };
