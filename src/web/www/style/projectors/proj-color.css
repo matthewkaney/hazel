@@ -1,0 +1,16 @@
+/* PROJECTOR: COLOR PICKER */
+
+.projector.color input {
+  border-radius: 0.3em;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--T2);
+  border-color: var(--BR2);
+}
+.projector.color input:hover {
+  background-color: var(--T3);
+  border-color: var(--BR3);
+}
+.projector.color:not(.indicated):not(:hover) > svg {
+  fill: var(--NONE);
+}
